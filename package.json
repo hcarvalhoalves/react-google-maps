@@ -1,9 +1,9 @@
 {
   "name": "react-google-maps",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "react-google-maps",
   "main": "src/ReactGmaps.js",
-  "author": "Henrique Carvalho Alves",
+  "author": "Henrique Carvalho Alves <hcarvalhoalves@gmail.com>",
   "homepage": "https://github.com/hcarvalhoalves/react-google-maps",
   "repository": {
     "type": "git",
