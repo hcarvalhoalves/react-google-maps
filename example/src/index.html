@@ -1,0 +1,112 @@
+<!doctype html>
+<head>
+	<title>react-gmaps</title>
+	<link rel="stylesheet" href="app.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>react-google-maps</h1>
+		<h2><a href="http://hcarvalhoalves.github.io/react-gmaps/">View project on GitHub</a></h2>
+		<p>Google Maps controls wrapped into reusable React components.</p>
+		<h2>Available components</h2>
+		<div id="examples">
+			<div class="comp">
+				<h3>GMaps.StaticMapWidget</h3>
+				<div id="StaticExample"></div>
+				<h4>Supported props</h4>
+				<dl>
+					<dt>latitude</dt>
+					<dd>Latitude in decimal.</dd>
+					<dt>longitude</dt>
+					<dd>Longitude in decimal.</dd>
+					<dt>width</dt>
+					<dd>Width in pixels. Limited to <b>640</b> (<b>2048</b> for <i>Google Maps API for Business</i>).</dd>
+					<dt>height</dt>
+					<dd>Height in pixels. Limited to <b>640</b> (<b>2048</b> for <i>Google Maps API for Business</i>).</dd>
+					<dt>scale</dt>
+					<dd>Resolution factor. Accepted values are <b>1</b> or <b>2</b> (<b>4</b> for <i>Google Maps API for Business</i>).</dd>
+				</dl>
+			</div>
+			<div class="comp">
+				<h3>GMaps.MapWidget</h3>
+				<div id="MapExample"></div>
+				<h4>Supported props</h4>
+				<dl>
+					<dt>latitude</dt>
+					<dd>Latitude in decimal.</dd>
+					<dt>longitude</dt>
+					<dd>Longitude in decimal.</dd>
+					<dt>zoom</dt>
+					<dd>Initial zoom level. Default to <b>4</b>.</dd>
+					<dt>width</dt>
+					<dd>Width in pixels.</dd>
+					<dt>height</dt>
+					<dd>Height in pixels.</dd>
+					<dt>draggable</dt>
+					<dd>Can click and drag the map. Default to <b>false</b>.</dd>
+					<dt>scrollwheel</dt>
+					<dd>Can zoom with mouse wheel. Default to <b>false</b>.</dd>
+					<dt>zoomControl</dt>
+					<dd>Show +/- buttons. Default to <b>true</b>.</dd>
+					<dt>scaleControl</dt>
+					<dd>Show scale slider. Default to <b>false</b>.</dd>
+					<dt>panControl</dt>
+					<dd>Show panning arrows. Default to <b>false</b>.</dd>
+					<dt>mapTypeControl</dt>
+					<dd>Allow selecting Map/Terrain/Satelite views. Default to <b>false</b>.</dd>
+					<dt>streetViewControl</dt>
+					<dd>Allow Street View. Default to <b>false</b>.</dd>
+					<dt>overviewMapControl</dt>
+					<dd>Toggle overview map controls. Default to <b>false</b>.</dd>
+					<dt>points</dt>
+					<dd>Add markers to the map. Should be an array of objects with the following attributes:
+						<dl>
+							<dt>latitude</dt>
+							<dd>Latitude in decimal.</dd>
+							<dt>longitude</dt>
+							<dd>Longitude in decimal.</dd>
+							<dt>title</dt>
+							<dd>Title shown while hovering this marker.</dd>
+							<dt>icon</dt>
+							<dd>Absolute URL to custom icon. Optional.</dd>
+							<dt>onClick</dt>
+							<dd>Callback to trigger when this marker is clicked.</dd>
+						</dl>
+					</dd>
+				</dl>
+				<p>You can find more information at the <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">Google Maps API official docs</a>.</p>
+			</div>
+			<div className="comp">
+				<h3>GMaps.AutocompleteField</h3>
+				<div id="AutocompleteExample"></div>
+				<p id="autocomplete-result"></p>
+				<h4>Supported props</h4>
+				<dl>
+					<dt>types</dt>
+					<dd>An array of supported lookup types. Defaults to <code>['geocode']</code>. See the <a href="https://developers.google.com/maps/documentation/javascript/places-autocomplete#add_autocomplete">official documentation</a> for other options</dd>
+					<dt>country</dt>
+					<dd>Limit results to suggestions inside a country. Must be passed as as a two-character, ISO 3166-1 Alpha-2 compatible country code. Optional.</dd>
+					<dt>bounds</dt>
+					<dd>Limit results to a bounding box. Passed as a pair of coordinates in the format <code>[[lat, lon], [lat, lon]]</code>.</dd>
+					<dt>onPlaceChanged</dt>
+					<dd>Callback called when the user selects one or zero results. Receives two arguments:
+						<dl>
+							<dt>latlon</dt>
+							<dd>Coordinates of the result in the format <code>[lat, lon]</code>.</dd>
+							<dt>distance</dt>
+							<dd>Radius of the result, if applicable. Useful to set the zoom level of a map control and have the entire result in view.</dd>
+						</dl>
+					</dd>
+				</dl>
+				<p><b>Important:</b> To use this component is necessary to include the Google Maps API client with <code>libraries=places</code> appended to the query string.</p>
+			</div>
+		</div>
+		<div class="footer">
+			Copyright &copy; 2015 Henrique Carvalho Alves.
+		</div>
+	</div>
+	<script src="common.js"></script>
+	<script src="bundle.js"></script>
+	<script src="app.js"></script>
+</body>

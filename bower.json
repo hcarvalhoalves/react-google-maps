@@ -1,0 +1,29 @@
+{
+  "name": "react-gmaps",
+  "version": "0.0.0",
+  "description": "react-gmaps",
+  "main": "dist/react-gmaps.min.js",
+  "homepage": "https://github.com/hcarvalhoalves/react-gmaps",
+  "authors": [
+    "Henrique Carvalho Alves"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}
